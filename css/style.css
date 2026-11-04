@@ -2192,21 +2192,27 @@ body {
 
 /* Marquee Section Styles */
 .marquee-section {
-  padding-top: 2.25rem !important;
-  padding-bottom: 2.25rem !important;
+  padding-top: 1.25rem !important;
+  padding-bottom: 3rem !important;
+}
+.marquee-title {
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
 }
 .marquee-track-1 {
-  padding-bottom: 0.75rem !important;
-}
-.marquee-track-2 {
-  padding-top: 0.75rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 .marquee-separator {
-  margin-top: 1.25rem !important;
-  margin-bottom: 1.25rem !important;
+  margin-top: 1.125rem !important;
+  margin-bottom: 1.125rem !important;
   height: 1px !important;
   width: 100% !important;
   background-color: rgba(255, 255, 255, 0.08) !important;
+}
+.marquee-track-2 {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 
