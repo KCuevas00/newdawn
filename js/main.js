@@ -92,10 +92,20 @@
     });
     window.addEventListener('resize', render);
     window.addEventListener('load', render);
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(render).observe(box);
+    }
+    if (before.complete) {
+      render();
+    } else {
+      before.addEventListener('load', render);
+    }
     render();
+    setTimeout(render, 50);
+    setTimeout(render, 300);
   });
 
-  /* ---------- Quick-quote form ---------- */
+  /* ---------- Quick-quote form (Web3Forms) ---------- */
   var form = $('#quote-form');
   if (form) {
     var submitBtn = $('#quote-submit');
@@ -106,30 +116,33 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var f = form.elements;
-      var phone = f.phone.value.trim();
-      var message = [
-        'Service requested: Quick Quote Request',
-        phone ? 'Phone: ' + phone : null,
-        '',
-        'ZIP Code: ' + f.zip.value.trim()
-      ].filter(function (l) { return l !== null; }).join('\n');
-
-      var data = new FormData();
-      data.append('name', f.name.value.trim());
-      data.append('email', f.email.value.trim());
-      data.append('message', message);
-      data.append('website', f.website.value); // honeypot (must stay empty)
+      var data = new FormData(form);
 
       errorBox.hidden = true;
       submitBtn.disabled = true;
       submitBtn.innerHTML = SPINNER;
 
-      fetch('contact.php', { method: 'POST', body: data })
-        .then(function (r) { if (!r.ok) throw new Error('Request failed: ' + r.status); })
-        .then(function () { form.hidden = true; success.hidden = false; })
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.success) {
+            form.hidden = true;
+            success.hidden = false;
+          } else {
+            throw new Error(res.message || 'Submission failed');
+          }
+        })
         .catch(function (err) {
           console.error('Quick quote failed:', err);
+          var msg = err.message || '';
+          if (msg.toLowerCase().indexOf('access key') !== -1) {
+            errorBox.textContent = 'Please configure your Web3Forms Access Key in index.html.';
+          } else {
+            errorBox.textContent = 'Something went wrong. Please try again or call us directly.';
+          }
           errorBox.hidden = false;
           submitBtn.disabled = false;
           submitBtn.textContent = idleLabel;

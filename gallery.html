@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | New Dawn Carpet Cleaning</title>
+  <meta name="description" content="Explore our visual work gallery of carpet, upholstery, rug, and commercial deep cleaning restoration across Chicagoland.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #site-header {
+      background-color: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+    }
+    .gallery-hero-header {
+      padding-top: 108px;
+      padding-bottom: 24px;
+      background: linear-gradient(180deg, rgba(14, 165, 233, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+      position: relative;
+    }
+    .gallery-hero-container {
+      max-width: 1760px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+    }
+    @media (min-width: 640px) {
+      .gallery-hero-container {
+        padding: 0 28px;
+      }
+    }
+    .gallery-hero-header h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #1a2332;
+      margin: 0;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .gallery-blue-bar {
+      height: 2px;
+      flex: 1;
+      background: linear-gradient(90deg, #0ea5e9 0%, rgba(14, 165, 233, 0.25) 50%, rgba(14, 165, 233, 0) 100%);
+      border-radius: 2px;
+      margin-bottom: 4px;
+    }
+    .gallery-wrapper {
+      max-width: 1760px;
+      margin: 0 auto;
+      padding: 0 20px 48px 20px;
+    }
+    @media (min-width: 640px) {
+      .gallery-wrapper {
+        padding: 0 28px 56px 28px;
+      }
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      width: 100%;
+    }
+    @media (min-width: 640px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+    }
+    @media (min-width: 1440px) {
+      .gallery-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+      }
+    }
+    @media (min-width: 1920px) {
+      .gallery-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 12px;
+      }
+    }
+    .gallery-item {
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+    }
+    @media (min-width: 768px) {
+      .gallery-item.span-2 {
+        grid-column: span 2;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  </style>
+</head>
+<body class="bg-cloud text-deep">
+  <div class="min-h-screen flex flex-col justify-between">
+    <div>
+      <!-- ===== SITE NAVBAR ===== -->
+      <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300 bg-white/85 backdrop-blur-md border-b border-line" id="site-header">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3">
+          <a href="index.html" class="flex shrink-0 items-center gap-3">
+            <img alt="New Dawn Carpet Cleaning" class="h-12 w-12 rounded-xl object-contain" src="images/logo.jpg">
+            <span class="hidden font-display text-base font-600 leading-tight text-deep sm:block">New Dawn<span class="block text-[0.58rem] font-sans font-500 uppercase tracking-[0.22em] text-slate">Carpet Cleaning</span></span>
+          </a>
+          <div class="hidden items-center gap-7 lg:flex">
+            <a href="index.html" class="text-sm font-500 text-slate transition-colors hover:text-brand">Home</a>
+            <a href="index.html#services" class="text-sm font-500 text-slate transition-colors hover:text-brand">Services</a>
+            <a href="index.html#why" class="text-sm font-500 text-slate transition-colors hover:text-brand">Why Us</a>
+            <a href="index.html#results" class="text-sm font-500 text-slate transition-colors hover:text-brand">Results</a>
+            <a href="index.html#reviews" class="text-sm font-500 text-slate transition-colors hover:text-brand">Reviews</a>
+            <a href="gallery.html" class="text-sm font-700 text-brand">Gallery</a>
+            <a href="index.html#contact" class="text-sm font-500 text-slate transition-colors hover:text-brand">Contact</a>
+          </div>
+          <div class="hidden items-center gap-5 md:flex">
+            <a href="tel:+17082637838" class="flex items-center gap-2 text-deep transition-colors hover:text-brand">
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-brand-soft text-brand">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </span>
+              <span>
+                <span class="block text-[0.6rem] font-600 uppercase tracking-[0.14em] text-slate">Call us now</span>
+                <span class="block text-[0.95rem] font-700 leading-none tracking-tight text-deep">(708) 263-7838</span>
+              </span>
+            </a>
+            <a href="index.html#contact" class="rounded-full bg-brand px-5 py-2.5 text-sm font-700 text-white shadow-lg shadow-brand/25 transition-all hover:-translate-y-px hover:bg-brand-dark hover:shadow-brand/35">Call for a Free Quote</a>
+          </div>
+          <div class="flex items-center gap-2 md:hidden">
+            <a href="tel:+17082637838" class="flex items-center gap-1.5 rounded-full bg-brand px-4 py-2.5 text-sm font-700 text-white shadow-md shadow-brand/25">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(708) 263-7838</span>
+            </a>
+            <button class="grid h-10 w-10 place-items-center rounded-xl border border-line text-deep" aria-label="Toggle menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-5 w-5" id="menu-icon-open"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x hidden h-5 w-5" id="menu-icon-close"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+            </button>
+          </div>
+        </nav>
+        <div class="hidden border-b border-line bg-white px-5 py-4 md:hidden" id="mobile-menu">
+          <div class="flex flex-col gap-3">
+            <a href="index.html" class="py-2 text-base font-500 text-slate transition-colors hover:text-brand">Home</a>
+            <a href="index.html#services" class="py-2 text-base font-500 text-slate transition-colors hover:text-brand">Services</a>
+            <a href="index.html#why" class="py-2 text-base font-500 text-slate transition-colors hover:text-brand">Why Us</a>
+            <a href="index.html#results" class="py-2 text-base font-500 text-slate transition-colors hover:text-brand">Results</a>
+            <a href="gallery.html" class="py-2 text-base font-700 text-brand">Gallery</a>
+            <a href="index.html#contact" class="py-2 text-base font-500 text-slate transition-colors hover:text-brand">Contact</a>
+            <div class="pt-2">
+              <a href="tel:+17082637838" class="flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3 text-center text-sm font-700 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Call for a Free Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== SIMPLE HEADER ===== -->
+      <section class="gallery-hero-header">
+        <div class="gallery-hero-container">
+          <h1>Gallery</h1>
+          <div class="gallery-blue-bar"></div>
+        </div>
+      </section>
+
+      <!-- ===== FRAMED GALLERY GRID ===== -->
+      <main class="w-full">
+        <div class="gallery-wrapper">
+          <div class="gallery-grid" id="gallery-container">
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.UFKTQQMxorihGeEuMajvhJEsULxGGdg25l21VuXZNvo.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.UFKTQQMxorihGeEuMajvhJEsULxGGdg25l21VuXZNvo.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.37xuJAjW-7gQqCERSNXDKanoY_5QCGYdcG_NOWykG6M.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.37xuJAjW-7gQqCERSNXDKanoY_5QCGYdcG_NOWykG6M.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.GtMVzsl-ZkgBn-fqbbz0M8pMEvDyWT-poS2RvzCw5-0.mp4" data-type="video" data-poster="images/att.GtMVzsl-ZkgBn-fqbbz0M8pMEvDyWT-poS2RvzCw5-0_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.GtMVzsl-ZkgBn-fqbbz0M8pMEvDyWT-poS2RvzCw5-0_poster.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.qcWwSMo2dpBbMv4nR2A2V3v4XdjDhiec5zQcsQ8WMTE.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.qcWwSMo2dpBbMv4nR2A2V3v4XdjDhiec5zQcsQ8WMTE.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.ELX4yggeIGRLrdzG8g6m0Xue4xpn6ZfpYipfvK_zbbA.mp4" data-type="video" data-poster="images/att.ELX4yggeIGRLrdzG8g6m0Xue4xpn6ZfpYipfvK_zbbA_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.ELX4yggeIGRLrdzG8g6m0Xue4xpn6ZfpYipfvK_zbbA_poster.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.iMeWTiEtridMP3YLCZ5rjbnao1K_bLM3KeS36HVZ8Xo.mp4" data-type="video" data-poster="images/att.iMeWTiEtridMP3YLCZ5rjbnao1K_bLM3KeS36HVZ8Xo_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.iMeWTiEtridMP3YLCZ5rjbnao1K_bLM3KeS36HVZ8Xo_poster.webp" loading="eager" fetchpriority="high">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.usoLal2YpE4dJIt_TTEJmTIo2L_ieds9cI_FdnqXKj4.mp4" data-type="video" data-poster="images/att.usoLal2YpE4dJIt_TTEJmTIo2L_ieds9cI_FdnqXKj4_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.usoLal2YpE4dJIt_TTEJmTIo2L_ieds9cI_FdnqXKj4_poster.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/carpet-after.webp" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/carpet-after.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.w-qUWu7l_cLZkO-Af5Wd3pf0_oA0f5xG2i-Dj4FVboA.mp4" data-type="video" data-poster="images/att.w-qUWu7l_cLZkO-Af5Wd3pf0_oA0f5xG2i-Dj4FVboA_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.w-qUWu7l_cLZkO-Af5Wd3pf0_oA0f5xG2i-Dj4FVboA_poster.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.Ece_TmsvuzDkI8evvhsVSZK9aMPaU1InuUFXeUzTn_M.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.Ece_TmsvuzDkI8evvhsVSZK9aMPaU1InuUFXeUzTn_M.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/service-rug-cleaning.webp" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/service-rug-cleaning.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.3KhFTl6FONqPjvHea1S3ZKCC7C4XSf8E0UkwUiU4wxs.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.3KhFTl6FONqPjvHea1S3ZKCC7C4XSf8E0UkwUiU4wxs.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.bGdicPPPa-0YY5S_R3HBBShyTBDC3vy8LBxbYl-wrws.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.bGdicPPPa-0YY5S_R3HBBShyTBDC3vy8LBxbYl-wrws.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.4jv-ICkCgrrxnMBe4gyI-TcZ1LKS6DKRghQb2GsX678.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.4jv-ICkCgrrxnMBe4gyI-TcZ1LKS6DKRghQb2GsX678.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.0svZkQqP35wSlG22FScivOXDTk3RPduiYsRGOeh4t0I.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.0svZkQqP35wSlG22FScivOXDTk3RPduiYsRGOeh4t0I.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.vS-tNgBPCy0XgHKgKNPDbt5lcFKG1wQHkugI53ej9ro.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.vS-tNgBPCy0XgHKgKNPDbt5lcFKG1wQHkugI53ej9ro.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.o1FH3uMdDPg46PJtSSR0FeF-ufY51bDPa1zqVeNxC74.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.o1FH3uMdDPg46PJtSSR0FeF-ufY51bDPa1zqVeNxC74.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.UgiJnT0EUOx7AJKYPcgm62QpY1S96T8vewuew1bkb2M.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.UgiJnT0EUOx7AJKYPcgm62QpY1S96T8vewuew1bkb2M.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.X19gqlW-ZIxoiNNRwW_ZHMzckbb9hZscoKbkeoLaNkw.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.X19gqlW-ZIxoiNNRwW_ZHMzckbb9hZscoKbkeoLaNkw.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.QYvMRBFdc18yGleEAqsBtOy5fZ8k5Wrno541gz_-qnI.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.QYvMRBFdc18yGleEAqsBtOy5fZ8k5Wrno541gz_-qnI.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.lRrViNzsB1mUw6GJSpH_lYW656rwLTW3vsilkqmdM_w.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.lRrViNzsB1mUw6GJSpH_lYW656rwLTW3vsilkqmdM_w.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.3yKPZLq98SMyEmSRBvl9Dj0xMpgCcRLidtErM-WvCjQ.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.3yKPZLq98SMyEmSRBvl9Dj0xMpgCcRLidtErM-WvCjQ.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.s9W5cWX0-YW-WfyjyEsJl_a41OFH_hzLF5fv-0vEHY0.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.s9W5cWX0-YW-WfyjyEsJl_a41OFH_hzLF5fv-0vEHY0.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.nWXuoosz_80ICr9eJkQzrPS9QksGZGvF5SZNatxXTmU.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.nWXuoosz_80ICr9eJkQzrPS9QksGZGvF5SZNatxXTmU.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.6_cL2LguZ8d-4yyU-Njomk4_kV-OsAzP0WQUYxfrOXc.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.6_cL2LguZ8d-4yyU-Njomk4_kV-OsAzP0WQUYxfrOXc.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.uzxxS-Dk-sIeBHbb4opH8Dvfo31xSpkeszbOjPJVbpg.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.uzxxS-Dk-sIeBHbb4opH8Dvfo31xSpkeszbOjPJVbpg.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.uuyZqYvm_Y8Rmi8h-ly9e-IKkglUq8W8Ujxs9umJQTQ.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.uuyZqYvm_Y8Rmi8h-ly9e-IKkglUq8W8Ujxs9umJQTQ.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.lppkb3SuHsg41EID2n5VdzmDtNE3cP-LoVg7rvmvRCY.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.lppkb3SuHsg41EID2n5VdzmDtNE3cP-LoVg7rvmvRCY.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.h-7ilm-OlWCf3hBEbezRdGifNoQf5LQZ8FxoElw12Rg.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.h-7ilm-OlWCf3hBEbezRdGifNoQf5LQZ8FxoElw12Rg.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.MVe2min86IJsgIsXD9pCDLya1SKlr7t0YuxMPxQ9Vrw.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.MVe2min86IJsgIsXD9pCDLya1SKlr7t0YuxMPxQ9Vrw.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.sZFhYmpa_PEJ1tfhe3j3igghxqKNujqryR7yV0UV7xE.mp4" data-type="video" data-poster="images/att.sZFhYmpa_PEJ1tfhe3j3igghxqKNujqryR7yV0UV7xE_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.sZFhYmpa_PEJ1tfhe3j3igghxqKNujqryR7yV0UV7xE_poster.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.wSagGT8kZYPcrxEaydGGUUXag28fxQy1mNAW71W0IiY.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.wSagGT8kZYPcrxEaydGGUUXag28fxQy1mNAW71W0IiY.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.dYHL6D9NTmQMltclhx81n0LzUJ2IQb7gNcmO9IxflFw.jpg" data-type="image" >
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.dYHL6D9NTmQMltclhx81n0LzUJ2IQb7gNcmO9IxflFw.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+      <div class="gallery-item group relative cursor-pointer overflow-hidden bg-cloud/10" data-src="images/att.wDbcsa8Wlehxdi64LfDeGmNNWgj8yvJ16DP-eSpzALE.mp4" data-type="video" data-poster="images/att.wDbcsa8Wlehxdi64LfDeGmNNWgj8yvJ16DP-eSpzALE_poster.jpg">
+        <img alt="" class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" src="images/gallery/att.wDbcsa8Wlehxdi64LfDeGmNNWgj8yvJ16DP-eSpzALE_poster.webp" loading="lazy" decoding="async">
+        
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/20 opacity-80 transition-all duration-300 group-hover:bg-black/30 group-hover:opacity-100">
+          <div class="grid h-12 w-12 place-items-center rounded-full bg-white/90 text-deep shadow-lg backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="ml-0.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+        </div>
+    
+        <div class="pointer-events-none absolute inset-0 bg-white/0 transition-colors duration-300 group-hover:bg-white/10"></div>
+      </div>
+        </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ===== MINIMAL FOOTER ===== -->
+    <footer class="mt-16 border-t border-line bg-white/50 py-8 text-center text-xs text-slate">
+      <p>© 2026 New Dawn Carpet Cleaning. Professional Carpet, Rug &amp; Upholstery Care.</p>
+    </footer>
+  </div>
+
+  <!-- ===== MINIMALIST LIGHTBOX MODAL (NO TEXT) ===== -->
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-deep/95 backdrop-blur-md opacity-0 transition-opacity duration-300">
+    <button id="lightbox-close" class="absolute top-6 right-6 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/10 text-white transition-all hover:bg-white/20" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/10 text-white transition-all hover:bg-white/20" aria-label="Previous">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 z-10 grid h-12 w-12 place-items-center rounded-full bg-white/10 text-white transition-all hover:bg-white/20" aria-label="Next">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+    <div id="lightbox-content" class="relative max-h-[90vh] max-w-[92vw] overflow-hidden flex items-center justify-center">
+      <img id="lightbox-img" src="" alt="" class="hidden max-h-[88vh] max-w-[90vw] object-contain rounded-lg shadow-2xl">
+      <video id="lightbox-video" controls class="hidden max-h-[88vh] max-w-[90vw] rounded-lg shadow-2xl" playsinline></video>
+    </div>
+  </div>
+
+  <script>
+    // Mobile navigation toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const openIcon = document.getElementById('menu-icon-open');
+    const closeIcon = document.getElementById('menu-icon-close');
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+        openIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+    }
+
+    // Pure visual Lightbox
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const item = items[currentIndex];
+      const type = item.getAttribute('data-type');
+      const src = item.getAttribute('data-src');
+
+      if (type === 'video') {
+        lightboxImg.classList.add('hidden');
+        lightboxVideo.classList.remove('hidden');
+        lightboxVideo.src = src;
+        const poster = item.getAttribute('data-poster');
+        if (poster) lightboxVideo.poster = poster;
+        lightboxVideo.play().catch(() => {});
+      } else {
+        lightboxVideo.pause();
+        lightboxVideo.classList.add('hidden');
+        lightboxVideo.src = '';
+        lightboxImg.classList.remove('hidden');
+        lightboxImg.src = src;
+      }
+
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      setTimeout(() => {
+        lightbox.classList.remove('opacity-0');
+        lightbox.classList.add('opacity-100');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('opacity-100');
+      lightbox.classList.add('opacity-0');
+      lightboxVideo.pause();
+      lightboxVideo.src = '';
+      setTimeout(() => {
+        lightbox.classList.remove('flex');
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    function showNext() {
+      const nextIdx = (currentIndex + 1) % items.length;
+      openLightbox(nextIdx);
+    }
+
+    function showPrev() {
+      const prevIdx = (currentIndex - 1 + items.length) % items.length;
+      openLightbox(prevIdx);
+    }
+
+    items.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.id === 'lightbox-content') {
+        closeLightbox();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (lightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+    });
+  </script>
+</body>
+</html>
