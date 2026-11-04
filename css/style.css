@@ -2228,3 +2228,10 @@ body {
   z-index: 50;
   transition: all 0.3s ease;
 }
+
+
+/* Before/After slider badge smooth transitions */
+[data-slider] [data-before-badge],
+[data-slider] [data-after-badge] {
+  transition: opacity 0.2s ease;
+}

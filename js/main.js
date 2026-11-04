@@ -64,11 +64,25 @@
     var handle = box.lastElementChild;
     var pos = 50, dragging = false;
 
+    var beforeBadge = box.querySelector('[data-before-badge]') || clip.querySelector('span');
+    var afterBadge = box.querySelector('[data-after-badge]');
+
     function render() {
       clip.style.width = pos + '%';
       handle.style.left = pos + '%';
       before.style.width = box.clientWidth + 'px'; // keep the "before" photo un-squished
       box.setAttribute('aria-valuenow', Math.round(pos));
+
+      // Hide After badge when Before is mostly or fully showing (pos > 75)
+      if (afterBadge) {
+        afterBadge.style.opacity = pos > 75 ? '0' : '1';
+        afterBadge.style.pointerEvents = pos > 75 ? 'none' : 'auto';
+      }
+      // Hide Before badge when After is mostly or fully showing (pos < 25)
+      if (beforeBadge) {
+        beforeBadge.style.opacity = pos < 25 ? '0' : '1';
+        beforeBadge.style.pointerEvents = pos < 25 ? 'none' : 'auto';
+      }
     }
     function setFromX(clientX) {
       var r = box.getBoundingClientRect();
