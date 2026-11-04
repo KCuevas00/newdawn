@@ -111,6 +111,108 @@
         aspect-ratio: 16 / 9;
       }
     }
+  
+    /* Lightbox Modal & Controls */
+    #lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      background-color: rgba(10, 15, 25, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.hidden {
+      display: none !important;
+    }
+    #lightbox-close {
+      position: absolute !important;
+      top: 24px !important;
+      right: 24px !important;
+      z-index: 10000 !important;
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    #lightbox-close:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: scale(1.08);
+    }
+    #lightbox-prev {
+      position: absolute !important;
+      left: 20px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      z-index: 10000 !important;
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    #lightbox-prev:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-50%) scale(1.08) !important;
+    }
+    #lightbox-next {
+      position: absolute !important;
+      right: 20px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      z-index: 10000 !important;
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      background-color: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    #lightbox-next:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-50%) scale(1.08) !important;
+    }
+    #lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox-img, #lightbox-video {
+      max-width: 90vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
   </style>
 </head>
 <body class="bg-cloud text-deep">
