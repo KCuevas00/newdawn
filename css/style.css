@@ -2250,3 +2250,69 @@ body {
   border-top: 1px solid #e2e8f0 !important;
   padding-top: 2rem !important;
 }
+
+
+/* Facebook CTA Button */
+.fb-community-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  padding: 10px 22px 10px 12px;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.fb-community-btn:hover {
+  border-color: #1877F2;
+  color: #1877F2;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(24, 119, 242, 0.25), 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+.fb-community-btn .fb-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: #1877F2;
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.fb-community-btn:hover .fb-icon-badge {
+  transform: scale(1.08);
+}
+.fb-community-btn .fb-count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(24, 119, 242, 0.08);
+  color: #1877F2;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease;
+}
+.fb-community-btn:hover .fb-count-badge {
+  background: rgba(24, 119, 242, 0.14);
+}
+.fb-community-btn .fb-arrow-icon {
+  margin-left: 2px;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+.fb-community-btn:hover .fb-arrow-icon {
+  transform: translateX(4px);
+  color: #1877F2;
+}
