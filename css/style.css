@@ -2229,9 +2229,24 @@ body {
   transition: all 0.3s ease;
 }
 
-
 /* Before/After slider badge smooth transitions */
 [data-slider] [data-before-badge],
 [data-slider] [data-after-badge] {
   transition: opacity 0.2s ease;
+}
+
+/* Utilities for padding/margin */
+.pt-4 { padding-top: 1rem; }
+.pt-6 { padding-top: 1.5rem; }
+.pt-7 { padding-top: 1.75rem; }
+.pt-8 { padding-top: 2rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-7 { margin-top: 1.75rem; }
+.mt-8 { margin-top: 2rem; }
+.mt-10 { margin-top: 2.5rem; }
+
+.review-card-footer {
+  margin-top: 2.5rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  padding-top: 2rem !important;
 }
