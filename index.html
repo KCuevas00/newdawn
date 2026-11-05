@@ -628,12 +628,12 @@
             <div class="mt-12 grid gap-6 md:grid-cols-3">
               <!-- Video Card 1 -->
               <div class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-deep/5">
-                <div class="relative aspect-video w-full overflow-hidden bg-slate-900">
+                <div class="video-card-container relative aspect-video w-full overflow-hidden bg-slate-900 cursor-pointer">
                   <video id="home-vid-1" class="h-full w-full object-cover" poster="images/video-residential-steam-extraction-process-poster.webp" preload="none" playsinline>
                     <source src="images/video-residential-steam-extraction-process.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                  <button type="button" aria-label="Play residential steam extraction video" onclick="const v = document.getElementById('home-vid-1'); v.setAttribute('controls', 'true'); v.play(); this.classList.add('opacity-0', 'pointer-events-none');" class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
+                  <button type="button" aria-label="Play residential steam extraction video" class="play-overlay-btn absolute inset-0 z-20 flex items-center justify-center bg-black/25 transition-all duration-300 group-hover:bg-black/35">
                     <span class="grid h-14 w-14 place-items-center rounded-full bg-white/95 text-brand shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="ml-1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     </span>
@@ -654,12 +654,12 @@
 
               <!-- Video Card 2 -->
               <div class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-deep/5">
-                <div class="relative aspect-video w-full overflow-hidden bg-slate-900">
+                <div class="video-card-container relative aspect-video w-full overflow-hidden bg-slate-900 cursor-pointer">
                   <video id="home-vid-2" class="h-full w-full object-cover" poster="images/video-bedroom-traffic-lane-carpet-cleaning-poster.webp" preload="none" playsinline>
                     <source src="images/video-bedroom-traffic-lane-carpet-cleaning.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                  <button type="button" aria-label="Play heavy traffic lane cleaning video" onclick="const v = document.getElementById('home-vid-2'); v.setAttribute('controls', 'true'); v.play(); this.classList.add('opacity-0', 'pointer-events-none');" class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
+                  <button type="button" aria-label="Play heavy traffic lane cleaning video" class="play-overlay-btn absolute inset-0 z-20 flex items-center justify-center bg-black/25 transition-all duration-300 group-hover:bg-black/35">
                     <span class="grid h-14 w-14 place-items-center rounded-full bg-white/95 text-brand shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="ml-1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     </span>
@@ -680,12 +680,12 @@
 
               <!-- Video Card 3 -->
               <div class="group flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-deep/5">
-                <div class="relative aspect-video w-full overflow-hidden bg-slate-900">
+                <div class="video-card-container relative aspect-video w-full overflow-hidden bg-slate-900 cursor-pointer">
                   <video id="home-vid-3" class="h-full w-full object-cover" poster="images/video-commercial-hallway-carpet-cleaning-poster.webp" preload="none" playsinline>
                     <source src="images/video-commercial-hallway-carpet-cleaning.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                  <button type="button" aria-label="Play commercial hallway carpet video" onclick="const v = document.getElementById('home-vid-3'); v.setAttribute('controls', 'true'); v.play(); this.classList.add('opacity-0', 'pointer-events-none');" class="absolute inset-0 flex items-center justify-center bg-black/20 transition-all duration-300 group-hover:bg-black/30">
+                  <button type="button" aria-label="Play commercial hallway carpet video" class="play-overlay-btn absolute inset-0 z-20 flex items-center justify-center bg-black/25 transition-all duration-300 group-hover:bg-black/35">
                     <span class="grid h-14 w-14 place-items-center rounded-full bg-white/95 text-brand shadow-xl backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="ml-1"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                     </span>
@@ -903,5 +903,45 @@
       </footer>
     </div>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.video-card-container').forEach(card => {
+        const vid = card.querySelector('video');
+        const btn = card.querySelector('.play-overlay-btn');
+        if (!vid || !btn) return;
+
+        const hideBtn = () => {
+          btn.style.setProperty('display', 'none', 'important');
+          vid.setAttribute('controls', 'true');
+        };
+
+        const showBtn = () => {
+          btn.style.removeProperty('display');
+          vid.removeAttribute('controls');
+        };
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          hideBtn();
+          vid.play().catch(() => {});
+        });
+
+        card.addEventListener('click', () => {
+          if (vid.paused) {
+            hideBtn();
+            vid.play().catch(() => {});
+          }
+        });
+
+        vid.addEventListener('play', hideBtn);
+        vid.addEventListener('pause', () => {
+          if (vid.currentTime === 0 || vid.ended) {
+            showBtn();
+          }
+        });
+        vid.addEventListener('ended', showBtn);
+      });
+    });
+  </script>
 </body>
 </html>
